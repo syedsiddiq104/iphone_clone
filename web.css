@@ -239,6 +239,13 @@ video {
     border: none;
     cursor: pointer;
   }
+  video{
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+    
+  }
 }
 
 
