@@ -694,20 +694,19 @@ h2 {
 
 /* -----------------------------------------SIGNIFICANT------------------------------ */
 
-.section-title {
-  padding: 0px 80px;
+.section-title{
+  padding:0px 50px ;
   font-size: 48px;
   font-weight: 700;
   color: #1d1d1f;
   margin-bottom: 40px;
 }
-
 .significant {
-  height: 100vh;
   background: #f5f5f7;
-  padding: 80px 40px;
-  margin: 80px 40px;
-  border-radius: 30px;
+  padding: 80px 40px;       
+  margin: 30px 40px;        
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  border-radius: 20px;     
 }
 
 
@@ -724,9 +723,8 @@ h2 {
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  /* gap: 30px; */
+  gap: 30px;
 }
-
 
 .tab {
   border-top: 1px solid #ccc;
@@ -748,56 +746,62 @@ h2 {
 }
 
 
+#mac:checked ~ .significant-wrapper .text-section label[for="mac"] h2,
+#watch:checked ~ .significant-wrapper .text-section label[for="watch"] h2,
+#airpods:checked ~ .significant-wrapper .text-section label[for="airpods"] h2 {
+  color: #0071e3;
+}
 
-
-
-#mac:checked~.significant-wrapper .text-section label[for="mac"] p,
-#watch:checked~.significant-wrapper .text-section label[for="watch"] p,
-#airpods:checked~.significant-wrapper .text-section label[for="airpods"] p {
+#mac:checked ~ .significant-wrapper .text-section label[for="mac"] p,
+#watch:checked ~ .significant-wrapper .text-section label[for="watch"] p,
+#airpods:checked ~ .significant-wrapper .text-section label[for="airpods"] p {
   display: block;
 }
 
 .image-section {
   flex: 1;
-  max-width: 800px;
+  max-width: 900px; 
   width: 100%;
-  min-height: 450px;
   position: relative;
-
+  min-height: 600px; 
+  margin-left: 250px;
 }
 
 .image {
   position: absolute;
   inset: 0;
-  background-size: contain;
+  background-size: contain;  
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-.image-section img {
-  width: 100%;
-  height: 600px;
-  display: block;
+
+.image1 {
+  background-image: url('	https://www.apple.com/in/iphone/home/images/overview/augment/mac__b2km5lqjzk1y_small_2x.jpg');
+}
+.image2 {
+  background-image: url('	https://www.apple.com/v/iphone/home/cb/images/overview/augment/watch__dkk6to52k7ma_small_2x.jpg');
+}
+.image3 {
+  background-image: url('	https://www.apple.com/in/iphone/home/images/overview/augment/airpods__cmw5fm88hrma_small_2x.jpg');
 }
 
 
-
-
-
-
-/* Show selected image */
-#mac:checked~.significant-wrapper .image-section .image1,
-#watch:checked~.significant-wrapper .image-section .image2,
-#airpods:checked~.significant-wrapper .image-section .image3 {
+#mac:checked ~ .significant-wrapper .image-section .image1,
+#watch:checked ~ .significant-wrapper .image-section .image2,
+#airpods:checked ~ .significant-wrapper .image-section .image3 {
   opacity: 1;
 }
 
 
 @media screen and (max-width: 768px) {
-
+  .image-section {
+    max-width: 100%;
+    min-height: 300px;
+    margin-left: 0px;
+  }
 
   .text-section {
     max-width: 100%;
